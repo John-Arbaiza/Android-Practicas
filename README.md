@@ -10,6 +10,7 @@ esencial para cualquier desarrollador que quiera crear aplicaciones Android de m
 * Primer APP
   
   Explorando el entorno de Android studio y usando sus herramientas para hacer un diseño sencillo de un login de una app para móviles.
+  
   ![2024-02-13 20_56_00-Running Devices - PrimerApp](https://github.com/John-Arbaiza/Android-Practicas/assets/94189760/d13bcfd6-a3c2-464f-afdc-89119cab3cd4)
 
 
