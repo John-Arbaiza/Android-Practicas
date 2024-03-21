@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, invitacion.class);
                 startActivity(intent);
 
-
             }
         });
     }

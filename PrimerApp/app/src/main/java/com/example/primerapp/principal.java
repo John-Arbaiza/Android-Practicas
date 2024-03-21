@@ -15,7 +15,6 @@ public class principal extends AppCompatActivity {
     //Deffinimos los atributos
     public TextView lblname;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
