@@ -13,5 +13,13 @@ esencial para cualquier desarrollador que quiera crear aplicaciones Android de m
   
   ![2024-02-13 20_56_00-Running Devices - PrimerApp](https://github.com/John-Arbaiza/Android-Practicas/assets/94189760/d13bcfd6-a3c2-464f-afdc-89119cab3cd4)
 
+* Gestor de Tareas
+  
+  El siguiente proyecto consiste en una app encargada de gestionar tareas, teniendo tres prioridades Alta, Media y Baja, así como tres tipos de categoría según la tarea las cuales son Hogar, Personal y Trabajo.
+  De igual manera entres las funcionalidades que se encuentran hasta el momento en el gestor de tareas además de agregar tareas también podemos eliminarlas 
+
+  ![2024-03-28 16_36_24-Window](https://github.com/John-Arbaiza/Android-Practicas/assets/94189760/09f8d064-4c21-481e-8a31-e992a2f28adb)
+  ![2024-03-28 16_38_10-Window](https://github.com/John-Arbaiza/Android-Practicas/assets/94189760/81f76ba1-9343-4725-82b5-815784e00217)
+
 
 
