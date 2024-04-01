@@ -9,9 +9,10 @@ esencial para cualquier desarrollador que quiera crear aplicaciones Android de m
 ## Proyectos 👨‍💻👩‍💻
 * Primer APP
   
-  Explorando el entorno de Android studio y usando sus herramientas para hacer un diseño sencillo de un login de una app para móviles.
+   Explorando el entorno de Android studio y usando sus herramientas para hacer un diseño sencillo de un login de una app para móviles el cual funciona si intentemos ingresar.
   
-  ![2024-02-13 20_56_00-Running Devices - PrimerApp](https://github.com/John-Arbaiza/Android-Practicas/assets/94189760/d13bcfd6-a3c2-464f-afdc-89119cab3cd4)
+  ![2024-03-03 22_21_42-Window](https://github.com/John-Arbaiza/Android-Practicas/assets/94189760/104aec53-ba0f-4c22-8e36-0011d62f8f37)
+  ![2024-03-03 22_22_10-Window](https://github.com/John-Arbaiza/Android-Practicas/assets/94189760/89ebfbe5-7d9e-4d0a-8d8c-c16e520f40b2)
 
 * Gestor de Tareas
   
