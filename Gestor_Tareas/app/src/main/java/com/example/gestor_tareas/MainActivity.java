@@ -9,7 +9,6 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -31,16 +30,18 @@ public class MainActivity extends AppCompatActivity {
     public Button btnRegistrar;
     //-----------------------------------------------------
     //Definimos un arrayList para los valores del spinner
-    public ArrayList<categorias> listCategorias;
+    public ArrayList<Categoria> listCategorias;
     //------------------------------------------------------
     //Para la lista
     public ArrayList<Tareas> listTareas;
     //definimos un listView
     public ListView listaView;
     //public TextView txt1;
-    public String tarea;
     public String prioridad;
     //------------------------------------------------------------------------------
+    public tareaAdapter adapter;
+    public String cat;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,22 +64,18 @@ public class MainActivity extends AppCompatActivity {
         spinner1 = findViewById(R.id.spinner);
         btnRegistrar = findViewById(R.id.button);
         listaView = findViewById(R.id.listaTareas);
-        listTareas = new ArrayList<Tareas>();
         //------------------------------------------------------------------------------
         //Parte donde se trabaja el contenido del spinner
         //------------------------------------------------------------------------------
         //Instanciamos
-        listCategorias = new ArrayList<>();
-        listCategorias.add(new categorias("Trabajo"));
-        listCategorias.add(new categorias("Hogar"));
-        listCategorias.add(new categorias("Personal"));
-        //Rellanamos el spinner con objetos de la clase categoria
-        ArrayAdapter<categorias> adapater = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,listCategorias);
-        adapater.setDropDownViewResource(androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
-        spinner1.setAdapter(adapater);
-        //------------------------------------------------------------------------------
-        //Evento del boton
-        //------------------------------------------------------------------------------
+        listCategorias = new ArrayList<Categoria>();
+        listTareas = new ArrayList<Tareas>();
+        adapter = new tareaAdapter(this,listTareas,this);
+        listaView.setAdapter(adapter);
+        //Llamamos al metodo que rellena el spinner
+        rellenarSpinner();
+
+        //Evento del button
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,10 +88,15 @@ public class MainActivity extends AppCompatActivity {
                 } else if (rbBaja.isChecked()) {
                     prioridad = "Baja";
                 }
-                tarea = txtTareas.getText().toString();
+                Tareas objetoTarea = new Tareas();
+                objetoTarea.setTitulo(txtTareas.getText().toString());
+                objetoTarea.setPrioridad(prioridad);
+                objetoTarea.setCategorias((Categoria) spinner1.getSelectedItem());
+                cat = spinner1.getSelectedItem().toString();
+                objetoTarea.setCategoria(cat);
+                listTareas.add(objetoTarea);
+                adapter.notifyDataSetChanged();
                 txtTareas.getText().clear();
-                //Llamando al metodo
-                llenarLista(tarea,prioridad,spinner1.getSelectedItem().toString());
             }
         });
 
@@ -124,15 +126,24 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-    }
-    //------------------------------------------------------------------------------
-    //Metodo para rellenar la lista
-    //------------------------------------------------------------------------------
-    public void llenarLista(String tarea, String prioridad, String categorias){
 
-        listTareas.add(new Tareas(tarea,prioridad,categorias));
-
-        Adapatador adapatador = new Adapatador(MainActivity.this,listTareas,R.layout.tareas);
-        listaView.setAdapter(adapatador);
     }
+
+    //------------------------------------------------------------------------------------
+    //Parte donde se encuentran los metodos
+    //------------------------------------------------------------------------------------
+    //Metodo para llenar el spinner
+    public void rellenarSpinner(){
+        listCategorias.add(new Categoria("Trabajo",R.drawable.trabajo,R.color.Trabajo));
+        listCategorias.add(new Categoria("Hogar",R.drawable.home,R.color.Hohar));
+        listCategorias.add(new Categoria("Personal",R.drawable.personal,R.color.personal));
+        listCategorias.add(new Categoria("Estudio",R.drawable.escuela,R.color.Estudio));
+        ArrayAdapter<Categoria> adapter = new ArrayAdapter<Categoria>(MainActivity.this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item
+            ,listCategorias);
+
+        adapter.setDropDownViewResource(androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
+        spinner1.setAdapter(adapter);
+    }
+
+
 }
