@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="ver_Limon">#9DDE8B</color>
+    <color name="verde_oscuro">#006769</color>
+    <color name="menta">#8DECB4</color>
+    <color name="mentaOscuro">#41B06E</color>
+</resources>

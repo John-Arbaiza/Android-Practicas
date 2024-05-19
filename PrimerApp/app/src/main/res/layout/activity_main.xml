@@ -20,7 +20,7 @@
         app:lottie_loop="true"
         app:lottie_autoPlay="true"
         app:lottie_fileName="animacion.json"
-        ></com.airbnb.lottie.LottieAnimationView>
+        tools:ignore="MissingClass"></com.airbnb.lottie.LottieAnimationView>
 
     <com.airbnb.lottie.LottieAnimationView
         android:layout_width="60dp"
@@ -33,7 +33,8 @@
         app:lottie_autoPlay="true"
         app:lottie_fileName="animation2.json"
         app:lottie_imageAssetsFolder="assets"
-        app:lottie_loop="true"></com.airbnb.lottie.LottieAnimationView>
+        app:lottie_loop="true"
+        tools:ignore="MissingClass"></com.airbnb.lottie.LottieAnimationView>
 
     <TextView
         android:id="@+id/textView2"

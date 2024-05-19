@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="Paciente:"
+        android:textColor="@color/verde_oscuro"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:text="Estatura:"
+        android:textColor="@color/verde_oscuro"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="52dp"
+        android:text="Plan:"
+        android:textColor="@color/verde_oscuro"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="44dp"
+        android:text="IMC:"
+        android:textColor="@color/verde_oscuro"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="44dp"
+        android:text="Peso:"
+        android:textColor="@color/verde_oscuro"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:text="Edad:"
+        android:textColor="@color/verde_oscuro"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="4dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/delete" />
+
+    <ImageButton
+        android:id="@+id/btnGuardarUpdate"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="272dp"
+        android:layout_marginEnd="4dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/guardar_edit" />
+
+    <ImageButton
+        android:id="@+id/btnEdit"
+        android:layout_width="58dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="156dp"
+        android:layout_marginEnd="4dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/edit" />
+
+    <EditText
+        android:id="@+id/lblPacientes"
+        android:layout_width="169dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        android:textColor="@color/mentaOscuro"
+        android:textColorHint="@color/mentaOscuro"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/lblEdades"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="number"
+        android:textColor="@color/mentaOscuro"
+        android:textColorHint="@color/mentaOscuro"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/lblPacientes" />
+
+    <EditText
+        android:id="@+id/lblPesoPaciente"
+        android:layout_width="171dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="numberDecimal"
+        android:textColor="@color/mentaOscuro"
+        android:textColorHint="@color/mentaOscuro"
+        app:layout_constraintStart_toEndOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/lblEdades" />
+
+    <EditText
+        android:id="@+id/lblAlturas"
+        android:layout_width="172dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="numberDecimal"
+        android:textColor="@color/mentaOscuro"
+        android:textColorHint="@color/mentaOscuro"
+        app:layout_constraintStart_toEndOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/lblPesoPaciente" />
+
+    <EditText
+        android:id="@+id/lblIMC"
+        android:layout_width="174dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="numberDecimal"
+        android:textColor="@color/mentaOscuro"
+        android:textColorHint="@color/mentaOscuro"
+        app:layout_constraintStart_toEndOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/lblAlturas" />
+
+    <EditText
+        android:id="@+id/lblIDPlan"
+        android:layout_width="179dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="number"
+        android:textColor="@color/mentaOscuro"
+        android:textColorHint="@color/mentaOscuro"
+        app:layout_constraintStart_toEndOf="@+id/textView22"
+        app:layout_constraintTop_toBottomOf="@+id/lblIMC" />
+
+    <ImageButton
+        android:id="@+id/btnCalculadora"
+        android:layout_width="57dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/calculadora"
+        android:background="@android:color/transparent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
